@@ -1,0 +1,520 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+    background:
+    linear-gradient(115deg, transparent 20%, rgba(255,255,255,.55) 32%, transparent 46%),
+    linear-gradient(115deg, transparent 52%, rgba(255,255,255,.45) 64%, transparent 78%),
+    linear-gradient(180deg, #efe3d3 0%, #e9d9c5 50%, #f0e6d9 100%) ;
+}
+
+.pict {
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: 24px;
+
+  background-image:
+    
+    url("pic.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #292727;
+}
+
+/* "Save the Date" */
+.pict h1 {
+ font-family: "Playpen Sans Arabic", cursive;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  margin: 0 0 1rem;
+  font-size: 12px;
+
+  padding-top: 70px;
+  text-transform: uppercase;
+}
+
+/* الأسماء */
+.pict .names {
+  margin: 0 0 1rem;
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-size: clamp(2.5rem, 10vw, 6rem);
+  line-height: 1.2;
+  
+}
+
+.pict .amp {
+  display: block; /* يضع & في سطر وحده على الهاتف */
+  font-size: 0.6em;
+}
+
+/* التاريخ */
+.pict p {
+  margin: 0;
+  font-family: "Playpen Sans Arabic", cursive;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-size: clamp(1.1rem, 4vw, 2rem);
+  letter-spacing: 0.15em;
+  padding-top: 10px;
+}
+.pict h3,h4{
+
+    font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  margin-top: 6px;
+}
+.pict img{
+  width: 100px;
+  height: 100px;
+}
+
+.countdown-wrap { margin: 28px 0 8px;
+    margin-top: 100px;
+    }
+
+    .countdown-label {
+      font-style:italic;font-weight:500;font-size:clamp(34px,10vw,30px);text-align:center;margin:26px 0 0;line-height:1.1;
+      color:  #1a1918;
+     
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      
+    }
+
+    .countdown-item {
+  
+     
+    
+      padding: 14px 18px;
+      min-width: 100px;
+      text-align: center;
+    }
+    .flr{
+      margin-right: 470px;
+    }
+
+
+    .countdown-num {
+      font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-size: clamp(2.5rem, 10vw, 6rem);
+  line-height: 1.2;
+      font-size: 34px;
+      color: rgb(211, 77, 99);
+      line-height: 1;
+      font-weight: 700;
+    }
+
+    .countdown-unit {
+      font-family: 'Amiri', serif;
+      font-size: 12px;
+      color: #050505;
+      opacity: 0.7;
+      margin-top: 4px;
+      letter-spacing: 1px;
+        font-family: "Gloria Hallelujah", cursive;
+  font-weight: 400;
+  font-style: normal;
+    }
+ 
+.lieu{
+  text-align: center;
+    font-family: "Gloria Hallelujah", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lieu img{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* الفيديو كخلفية */
+.video-box {
+  position: relative;
+  width: 400px;
+  max-width: 100%;
+  height: 250px;
+  margin: 40px auto 0; /* auto = توسيط الفيديو في الصفحة */
+}
+
+.bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(26, 25, 24, 0.5);
+}
+
+.center-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 12px 28px;
+  background: transparent;
+  color: #070707;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 30px ;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+.center-btn:hover{
+  background-color: #474444;
+  transition: 2s;
+}
+/* على الحاسوب: الأسماء في سطر واحد */
+/* ========== أجهزة لوحية وهواتف كبيرة (حتى 768px) ========== */
+@media (max-width: 768px) {
+  .pict {
+    padding: 20px 14px;
+  }
+
+  .pict h1 {
+    padding-top: 40px;
+  }
+
+  .countdown-wrap {
+    margin-top: 60px;
+  }
+
+  .flr {
+    margin-right: 0;
+  }
+}
+
+/* ========== هواتف عادية (حتى 480px) ========== */
+@media (max-width: 480px) {
+  .pict .names {
+    font-size: 2.8rem;
+  }
+
+  .pict p {
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+  }
+
+  .pict img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .countdown {
+    gap: 6px;
+  }
+
+  .countdown-item {
+    min-width: 0;
+    padding: 8px 4px;
+  }
+
+  .countdown-num {
+    font-size: 26px;
+  }
+
+  .countdown-unit {
+    font-size: 10px;
+  }
+
+  .countdown-label {
+    font-size: 16px;
+  }
+
+  .video-box {
+    width: 100%;
+    height: 200px;
+  }
+
+  .center-btn {
+    padding: 10px 22px;
+    font-size: 14px;
+  }
+}
+
+/* ========== هواتف صغيرة (حتى 360px) ========== */
+@media (max-width: 360px) {
+  .pict .names {
+    font-size: 2.3rem;
+  }
+
+  .pict p {
+    font-size: 0.9rem;
+  }
+
+  .pict img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .countdown-num {
+    font-size: 22px;
+  }
+
+  .countdown-unit {
+    font-size: 9px;
+  }
+
+  .video-box {
+    height: 170px;
+  }
+
+  .center-btn {
+    padding: 8px 18px;
+    font-size: 13px;
+  }
+}
+
+.prog{--wine:#0a0607;--gold:rgb(211, 77, 99);--sand:#f1dcc3;max-width:100ù;margin-top: 100px ;padding:28px 22px 50px;color:var(--wine);font-family:'Cormorant Garamond',Georgia,serif ; background:url("foot3.jpg") center/cover no-repeat;;}
+.prog-top{display:flex;justify-content:space-between;align-items:center}
+.prog-eyebrow{font-family:'Jost',sans-serif;letter-spacing:.35em;font-size:13px;color:var(--gold)}
+.prog-lang{display:flex;border:2px solid var(--sand);border-radius:30px;overflow:hidden;background:#fff8f0}
+.prog-lang button{font-family:'Jost',sans-serif;letter-spacing:.2em;border:0;padding:10px 18px;font-size:14px;background:transparent;color:var(--gold);cursor:pointer}
+.prog-lang button.active{background:var(--wine);color:#fff}
+.prog-title{font-style:italic;font-weight:500;font-size:clamp(34px,10vw,48px);text-align:center;margin:26px 0 0;line-height:1.1}
+.prog-divider{height:1px;width:60%;margin:34px auto 40px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.prog-list{list-style:none;margin:0;padding:0}
+.prog-list li{display:flex;align-items:center;gap:22px;position:relative;padding-bottom:34px}
+.prog-list li:last-child{padding-bottom:0}
+.prog-list li:not(:last-child)::after{content:"";position:absolute;left:41px;top:86px;bottom:-6px;width:1px;background:var(--gold);opacity:.7}
+.prog-icon{flex:none;width:84px;height:84px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(160deg,#ebc0c8,#f1d3cb);color:var(--gold);border:4px solid #fff7ee;box-shadow:0 0 0 10px rgba(201,161,90,.13);position:relative;z-index:1}
+.prog-icon svg{width:36px;height:36px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.prog-time{font-family:'Jost',sans-serif;letter-spacing:.2em;color:var(--gold);font-size:15px;margin-bottom:4px}
+.prog-label{font-style:italic;font-size:clamp(22px,6.4vw,28px);font-weight:500;line-height:1.15}
+
+
+.ft{
+  margin-top: 100px;
+  position:relative;
+  min-height:300px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:60px 24px;
+  /* غيّر رابط الصورة */
+  background:url("foot3.jpg") center/cover no-repeat;
+}
+/* التدرج الذي ينتقل من لون الصفحة إلى الصورة الداكنة */
+.ft::before{
+  content:"";
+  position:absolute;
+  top:0;left:0;right:0;
+  height:150px;
+  background:linear-gradient(to bottom,#f3ebe0,rgba(83, 82, 82, 0));
+}
+/* طبقة تعتيم على الصورة */
+.ft::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(95, 93, 93, 0.35);
+}
+.ft-card{
+  position:relative;
+  z-index:1;
+  width:100%;
+  max-width:420px;
+  padding:56px 24px 48px;
+  text-align:center;
+  color:#fff;
+  background:rgba(104, 101, 101, 0.55);
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+  border-radius:28px;
+}
+.ft-love{
+  font-family:'Noto Serif',Georgia,serif;
+  font-style:italic;
+  font-size:22px;
+  margin-bottom:10px;
+}
+.ft-names{
+  font-family:'Dancing Script',cursive;
+  font-weight:500;
+  font-size:clamp(46px,14vw,66px);
+  line-height:1.1;
+  margin:0 0 30px;
+}
+.ft-credit{
+  font-family:'Jost',sans-serif;
+  letter-spacing:.2em;
+  font-size:15px;
+  opacity:.9;
+}
+
+/* (اختياري) الخط الأنيق */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap');
+
+.menu-section {
+  --gold: rgb(211, 77, 99);
+  --ink: black;
+  --bg: #14110f;
+
+  position: relative;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 120px 32px 64px;
+  
+  color: var(--ink);
+  text-align: center;
+
+
+}
+
+/* إطار داخلي رفيع */
+.menu-section::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+ 
+  pointer-events: none;
+}
+
+/* صورة الطبق */
+.menu-plate {
+  position: absolute;
+  top: -90px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 50%;
+  opacity: 0.35;
+  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.6));
+  pointer-events: none;
+}
+
+/* العنوان */
+.menu-title {
+  position: relative;
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(2.4rem, 6vw, 3.4rem);
+  font-weight: 600;
+  letter-spacing: 0.35em;
+  padding-left: 0.35em; /* لتوسيط التباعد */
+  color: var(--gold);
+}
+
+.menu-subtitle {
+  position: relative;
+  margin: 8px 0 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-style: italic;
+  font-size: 1.25rem;
+  letter-spacing: 0.08em;
+  color: rgba(244, 237, 225, 0.75);
+}
+
+/* الخط الفاصل */
+.menu-line {
+  width: 90px;
+  height: 1px;
+  margin: 28px auto 40px;
+  border: 0;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+/* كل طبق */
+.menu-course {
+  position: relative;
+  padding: 0 16px;
+}
+
+.course-name {
+  margin: 0 0 10px;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  padding-left: 0.3em;
+  color: var(--gold);
+}
+
+.course-dish {
+  margin: 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+/* الفاصل ~ */
+.menu-sep {
+  display: block;
+  margin: 26px 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.4rem;
+  color: var(--gold);
+  opacity: 0.8;
+}
+
+/* الجوال */
+@media (max-width: 480px) {
+  .menu-section {
+    padding: 100px 20px 48px;
+  }
+  .menu-plate {
+    width: 200px;
+    height: 200px;
+    top: -70px;
+  }
+  .course-dish {
+    font-size: 1.15rem;
+  }
+}
+/* زر اللغة */
+.lang-switch{position:fixed;top:calc(12px + env(safe-area-inset-top,0px));right:12px;z-index:1000;display:flex;direction:ltr;
+  border:1px solid rgb(245, 208, 229);border-radius:999px;overflow:hidden;background:rgba(255,248,242,.9);
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);box-shadow:0 4px 14px rgba(0,0,0,.18)}
+.lang-switch button{border:0;background:transparent;padding:8px 14px;font:600 14px/1 "Playpen Sans Arabic","Jost",sans-serif;
+  color:rgbrgb(245, 208, 229);cursor:pointer;letter-spacing:0}
+.lang-switch button.active{background:rgb(245, 208, 229);color:black}
+
+/* زر الصوت */
+.sound-btn{position:fixed;bottom:calc(16px + env(safe-area-inset-bottom,0px));right:12px;z-index:1000;width:46px;height:46px;
+  border-radius:50%;border:1px solid rgb(211,77,99);background:rgba(255,248,242,.92);color:rgb(211,77,99);
+  display:grid;place-items:center;padding:0;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.2)}
+.sound-btn svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.sound-btn .off{display:none}
+.sound-btn[aria-pressed="false"] .on{display:none}
+.sound-btn[aria-pressed="false"] .off{display:block}
+.lang-switch button:focus-visible,.sound-btn:focus-visible{outline:3px solid #0a0607;outline-offset:2px}
+
+/* الزهور */
+#petals-canvas{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:5}
+
+/* ترتيب العدّاد: يوم، ساعة، دقيقة، ثانية في اللغتين */
+html[dir="ltr"] .countdown{flex-direction:row-reverse}
+
+/* خط الربط في البرنامج يتبع الاتجاه */
+.prog-list li:not(:last-child)::after{left:auto;inset-inline-start:41px}
+
+/* العربية: بدون تباعد حروف ولا خط مائل */
+html[lang="ar"] :is(.pict,.countdown-wrap,.prog,.lieu,.menu-section,.ft) *:not(svg):not(path):not(circle):not(rect){
+  font-family:"Playpen Sans Arabic","Noto Naskh Arabic",Tahoma,sans-serif !important;
+  letter-spacing:0 !important;font-style:normal !important;text-transform:none !important}
